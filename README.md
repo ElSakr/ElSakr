@@ -1,16 +1,18 @@
-### Hi there 👋
+<h1 align="center">Hi there 👋, My Name is Amr Skar</h1>
+<p align="center">
+Experienced Software Engineer with 7+ years of demonstrated expertise in the development of innovative, high quality, performant and well-engineered software solutions for clients. I adopt the highest standards and best practices in the delivery of all projects and strive to achieve consistent customer satisfaction through clear and open communication with clients on all project execution activities.
+</p>
 
-<!--
-**ElSakr/ElSakr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div align="center">
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=ElSakr&show_icons=true&theme=dark&hide=html)  
+
+![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=ElSakr&theme=dark&hide=html)  
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ElSakr&theme=dark&hide=html)](https://github.com/anuraghazra/github-readme-stats)
+
+![Profile views](https://gpvc.arturio.dev/ElSakr)  
+
+</div>
