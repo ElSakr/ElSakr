@@ -12,22 +12,22 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="202.7" height="8" fill="#178600" mask="url(#bm)"/>
-  <rect x="227.7" y="55" width="109.0" height="8" fill="#f1e05a" mask="url(#bm)"/>
-  <rect x="336.7" y="55" width="42.7" height="8" fill="#b07219" mask="url(#bm)"/>
-  <rect x="379.4" y="55" width="6.0" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="385.4" y="55" width="4.2" height="8" fill="#3572A5" mask="url(#bm)"/>
-  <rect x="389.6" y="55" width="3.5" height="8" fill="#663399" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="202.2" height="8" fill="#178600" mask="url(#bm)"/>
+  <rect x="227.2" y="55" width="108.7" height="8" fill="#f1e05a" mask="url(#bm)"/>
+  <rect x="336.0" y="55" width="42.6" height="8" fill="#b07219" mask="url(#bm)"/>
+  <rect x="378.5" y="55" width="6.0" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="384.6" y="55" width="5.0" height="8" fill="#3572A5" mask="url(#bm)"/>
+  <rect x="389.6" y="55" width="3.4" height="8" fill="#663399" mask="url(#bm)"/>
   <rect x="393.1" y="55" width="1.7" height="8" fill="#012456" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#178600"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">54.8%</text>
+    <text x="39" y="9" class="lp">54.7%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#f1e05a"/>
     <text x="16" y="9" class="ln">JavaScript</text>
-    <text x="99" y="9" class="lp">29.5%</text>
+    <text x="99" y="9" class="lp">29.4%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#b07219"/>
@@ -42,7 +42,7 @@
   <g transform="translate(25, 151)">
     <circle cx="5" cy="5" r="5" fill="#3572A5"/>
     <text x="16" y="9" class="ln">Python</text>
-    <text x="69" y="9" class="lp">1.1%</text>
+    <text x="69" y="9" class="lp">1.4%</text>
   </g>
   <g transform="translate(210, 151)">
     <circle cx="5" cy="5" r="5" fill="#663399"/>
