@@ -201,13 +201,20 @@ def fetch_stats():
     - REST repos (fallback for languages if GraphQL fails)
     """
     # --- REST: profile & commits (always accurate) --------------------------
-    user_profile = github_rest(f"https://api.github.com/users/{USERNAME}")
-    if not user_profile:
-        print("Failed to fetch user profile", file=sys.stderr)
-        sys.exit(1)
+    # Try authenticated endpoint first (includes private repos)
+    user_profile = github_rest(f"https://api.github.com/user") if TOKEN else None
+    if user_profile and user_profile.get("login", "").lower() == USERNAME.lower():
+        # Authenticated as the target user — total_private_repos is available
+        total_repos = user_profile.get("public_repos", 0) + user_profile.get("total_private_repos", 0)
+    else:
+        # Fallback to public profile (PAT missing or belongs to different user)
+        user_profile = github_rest(f"https://api.github.com/users/{USERNAME}")
+        if not user_profile:
+            print("Failed to fetch user profile", file=sys.stderr)
+            sys.exit(1)
+        total_repos = user_profile.get("public_repos", 0)
 
     name = user_profile.get("name") or USERNAME
-    total_repos = user_profile.get("public_repos", 0)
 
     print("  Fetching all-time commit count ...")
     total_commits = _fetch_total_commits()
