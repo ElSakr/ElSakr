@@ -114,64 +114,8 @@ def _aggregate_languages(repos):
     ]
 
 
-def fetch_stats_graphql():
-    """Primary: fetch stats via the GraphQL API."""
-    query = """
-    {
-      user(login: "%s") {
-        name
-        contributionsCollection {
-          totalCommitContributions
-          restrictedContributionsCount
-          totalPullRequestContributions
-          totalIssueContributions
-        }
-        repositories(first: 100, ownerAffiliations: OWNER, orderBy: {field: STARGAZERS, direction: DESC}) {
-          totalCount
-          nodes {
-            stargazerCount
-            forkCount
-            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
-              edges {
-                size
-                node { name color }
-              }
-            }
-          }
-        }
-        pullRequests(first: 1) { totalCount }
-        issues(first: 1) { totalCount }
-      }
-    }
-    """ % USERNAME
-
-    data = github_graphql(query)
-    if not data or not data.get("user"):
-        return None
-
-    user = data["user"]
-    repos = user["repositories"]["nodes"]
-    contrib = user["contributionsCollection"]
-
-    return {
-        "name": user.get("name") or USERNAME,
-        "total_stars": sum(r["stargazerCount"] for r in repos),
-        "total_commits": contrib["totalCommitContributions"] + contrib["restrictedContributionsCount"],
-        "total_prs": user["pullRequests"]["totalCount"],
-        "total_issues": user["issues"]["totalCount"],
-        "total_repos": user["repositories"]["totalCount"],
-        "languages": _aggregate_languages(repos),
-    }
-
-
-def fetch_stats_rest():
-    """Fallback: fetch stats via the REST API."""
-    user = github_rest(f"https://api.github.com/users/{USERNAME}")
-    if not user:
-        print("Failed to fetch user data", file=sys.stderr)
-        sys.exit(1)
-
-    # Paginate repos
+def _fetch_all_repos_rest():
+    """Paginate through all public repos via REST."""
     repos = []
     page = 1
     while True:
@@ -184,10 +128,50 @@ def fetch_stats_rest():
         if len(batch) < 100:
             break
         page += 1
+    return repos
 
-    total_stars = sum(r.get("stargazers_count", 0) for r in repos)
 
-    # Language aggregation via REST (approximation by repo size)
+def _fetch_total_commits():
+    """Get all-time public commit count via the REST search API."""
+    req = urllib.request.Request(
+        f"https://api.github.com/search/commits?q=author:{USERNAME}&per_page=1"
+    )
+    if TOKEN:
+        req.add_header("Authorization", f"token {TOKEN}")
+    req.add_header("Accept", "application/vnd.github.v3+json")
+    req.add_header("User-Agent", "github-stats-generator")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode())
+            return data.get("total_count", 0)
+    except urllib.error.HTTPError as exc:
+        print(f"Commit search error {exc.code}", file=sys.stderr)
+        return 0
+
+
+def _fetch_languages_graphql(repos_nodes):
+    """Aggregate language data from GraphQL repository nodes."""
+    languages = {}
+    for repo in repos_nodes:
+        for edge in repo["languages"]["edges"]:
+            name = edge["node"]["name"]
+            color = edge["node"]["color"] or LANG_COLORS.get(name, DEFAULT_COLOR)
+            size = edge["size"]
+            if name in languages:
+                languages[name]["size"] += size
+            else:
+                languages[name] = {"size": size, "color": color}
+
+    sorted_langs = sorted(languages.items(), key=lambda x: x[1]["size"], reverse=True)[:8]
+    total_size = sum(v["size"] for _, v in sorted_langs)
+    return [
+        {"name": n, "percentage": v["size"] / total_size * 100 if total_size else 0, "color": v["color"]}
+        for n, v in sorted_langs
+    ]
+
+
+def _fetch_languages_rest(repos):
+    """Aggregate language data from REST repo list (approximation)."""
     languages = {}
     for repo in repos:
         lang = repo.get("language")
@@ -196,32 +180,112 @@ def fetch_stats_rest():
 
     sorted_langs = sorted(languages.items(), key=lambda x: x[1], reverse=True)[:8]
     total_size = sum(s for _, s in sorted_langs)
-
-    return {
-        "name": user.get("name") or USERNAME,
-        "total_stars": total_stars,
-        "total_commits": 0,
-        "total_prs": 0,
-        "total_issues": 0,
-        "total_repos": user.get("public_repos", 0),
-        "languages": [
-            {
-                "name": n,
-                "percentage": s / total_size * 100 if total_size else 0,
-                "color": LANG_COLORS.get(n, DEFAULT_COLOR),
-            }
-            for n, s in sorted_langs
-        ],
-    }
+    return [
+        {
+            "name": n,
+            "percentage": s / total_size * 100 if total_size else 0,
+            "color": LANG_COLORS.get(n, DEFAULT_COLOR),
+        }
+        for n, s in sorted_langs
+    ]
 
 
 def fetch_stats():
-    """Fetch stats, trying GraphQL first then falling back to REST."""
-    stats = fetch_stats_graphql()
-    if stats is None:
-        print("GraphQL unavailable, falling back to REST API", file=sys.stderr)
-        stats = fetch_stats_rest()
-    return stats
+    """Fetch stats using a combination of GraphQL and REST APIs.
+
+    - REST ``/users/{username}``         → public_repos count
+    - REST ``/search/commits``           → all-time commit count
+    - GraphQL ``user.pullRequests``      → all-time PR count
+    - GraphQL ``user.issues``            → all-time issue count
+    - GraphQL ``user.repositories``      → stars + per-file language data
+    - REST repos (fallback for languages if GraphQL fails)
+    """
+    # --- REST: profile & commits (always accurate) --------------------------
+    user_profile = github_rest(f"https://api.github.com/users/{USERNAME}")
+    if not user_profile:
+        print("Failed to fetch user profile", file=sys.stderr)
+        sys.exit(1)
+
+    name = user_profile.get("name") or USERNAME
+    total_repos = user_profile.get("public_repos", 0)
+
+    print("  Fetching all-time commit count ...")
+    total_commits = _fetch_total_commits()
+
+    # --- GraphQL: PRs, issues, stars, languages -----------------------------
+    query = """
+    {
+      user(login: "%s") {
+        repositories(first: 100, ownerAffiliations: OWNER, orderBy: {field: STARGAZERS, direction: DESC}) {
+          nodes {
+            stargazerCount
+            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+              edges {
+                size
+                node { name color }
+              }
+            }
+          }
+          pageInfo { hasNextPage endCursor }
+        }
+        pullRequests(first: 1) { totalCount }
+        issues(first: 1) { totalCount }
+      }
+    }
+    """ % USERNAME
+
+    gql = github_graphql(query)
+
+    if gql and gql.get("user"):
+        user = gql["user"]
+        repos_nodes = user["repositories"]["nodes"]
+
+        # Paginate remaining repos if needed
+        page_info = user["repositories"]["pageInfo"]
+        while page_info["hasNextPage"]:
+            next_q = """
+            {
+              user(login: "%s") {
+                repositories(first: 100, after: "%s", ownerAffiliations: OWNER, orderBy: {field: STARGAZERS, direction: DESC}) {
+                  nodes {
+                    stargazerCount
+                    languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+                      edges { size node { name color } }
+                    }
+                  }
+                  pageInfo { hasNextPage endCursor }
+                }
+              }
+            }
+            """ % (USERNAME, page_info["endCursor"])
+            page_data = github_graphql(next_q)
+            if not page_data or not page_data.get("user"):
+                break
+            repos_nodes.extend(page_data["user"]["repositories"]["nodes"])
+            page_info = page_data["user"]["repositories"]["pageInfo"]
+
+        total_stars = sum(r["stargazerCount"] for r in repos_nodes)
+        total_prs = user["pullRequests"]["totalCount"]
+        total_issues = user["issues"]["totalCount"]
+        languages = _fetch_languages_graphql(repos_nodes)
+    else:
+        # Full REST fallback
+        print("GraphQL unavailable, falling back to REST", file=sys.stderr)
+        repos = _fetch_all_repos_rest()
+        total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+        total_prs = 0
+        total_issues = 0
+        languages = _fetch_languages_rest(repos)
+
+    return {
+        "name": name,
+        "total_stars": total_stars,
+        "total_commits": total_commits,
+        "total_prs": total_prs,
+        "total_issues": total_issues,
+        "total_repos": total_repos,
+        "languages": languages,
+    }
 
 
 # ---------------------------------------------------------------------------
