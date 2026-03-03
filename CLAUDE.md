@@ -32,7 +32,7 @@ The repo includes a self-hosted stats generation system that replaces third-part
 
 ## How Stats Generation Works
 
-1. The GitHub Actions workflow runs **daily at midnight UTC**, on **manual dispatch**, or when `scripts/generate_stats.py` is modified on `master`.
+1. The GitHub Actions workflow runs **daily at midnight UTC**, on **manual dispatch**, or when `scripts/generate_stats.py` is modified on `main`.
 2. The Python script authenticates with `GITHUB_TOKEN` and queries the GitHub GraphQL API for:
    - Stars, commits, PRs, issues, and repo count (stats card)
    - Language breakdown by code size across all owned repos (languages card)
@@ -56,8 +56,8 @@ The repo includes a self-hosted stats generation system that replaces third-part
 
 ## Git Workflow
 
-- **Default branch**: `master`
-- Commits are made directly to `master`
+- **Default branch**: `main`
+- Commits are made directly to `main`
 - The Actions bot auto-commits updated SVGs with message `chore: update GitHub stats`
 - Human commit messages are short and descriptive (e.g., "Update README.md")
 
