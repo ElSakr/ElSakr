@@ -1,0 +1,18 @@
+<svg width="420" height="180" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg   { fill: #0d1117; stroke: #30363d; stroke-width: 1; }
+      .ttl  { font: 600 18px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #58a6ff; }
+      .ln   { font: 400 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #c9d1d9; }
+      .lp   { font: 400 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #8b949e; }
+      .hint { font: 400 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #8b949e; }
+    </style>
+    <mask id="bm">
+      <rect x="25" y="55" width="370" height="8" rx="3" fill="white"/>
+    </mask>
+  </defs>
+  <rect class="bg" x="0.5" y="0.5" width="419" height="179" rx="6"/>
+  <text x="25" y="38" class="ttl">Most Used Languages</text>
+  <rect x="25" y="55" width="370" height="8" rx="3" fill="#30363d" mask="url(#bm)"/>
+  <text x="210" y="110" class="hint" text-anchor="middle">Waiting for first workflow run ...</text>
+</svg>
