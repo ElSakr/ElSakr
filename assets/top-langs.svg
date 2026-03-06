@@ -12,33 +12,33 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="228.2" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="253.2" y="55" width="70.5" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="323.7" y="55" width="36.3" height="8" fill="#178600" mask="url(#bm)"/>
-  <rect x="360.0" y="55" width="21.0" height="8" fill="#3178c6" mask="url(#bm)"/>
-  <rect x="380.9" y="55" width="6.3" height="8" fill="#f1e05a" mask="url(#bm)"/>
-  <rect x="387.2" y="55" width="3.6" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="390.8" y="55" width="2.6" height="8" fill="#663399" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="226.7" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="251.7" y="55" width="70.0" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="321.7" y="55" width="37.0" height="8" fill="#178600" mask="url(#bm)"/>
+  <rect x="358.7" y="55" width="22.2" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="381.0" y="55" width="6.3" height="8" fill="#f1e05a" mask="url(#bm)"/>
+  <rect x="387.2" y="55" width="3.5" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="390.7" y="55" width="2.7" height="8" fill="#663399" mask="url(#bm)"/>
   <rect x="393.4" y="55" width="1.6" height="8" fill="#555555" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#4A76B8"/>
     <text x="16" y="9" class="ln">MQL5</text>
-    <text x="54" y="9" class="lp">61.7%</text>
+    <text x="54" y="9" class="lp">61.3%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#62A8D6"/>
     <text x="16" y="9" class="ln">MQL4</text>
-    <text x="54" y="9" class="lp">19.1%</text>
+    <text x="54" y="9" class="lp">18.9%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#178600"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">9.8%</text>
+    <text x="39" y="9" class="lp">10.0%</text>
   </g>
   <g transform="translate(210, 119)">
     <circle cx="5" cy="5" r="5" fill="#3178c6"/>
     <text x="16" y="9" class="ln">TypeScript</text>
-    <text x="99" y="9" class="lp">5.7%</text>
+    <text x="99" y="9" class="lp">6.0%</text>
   </g>
   <g transform="translate(25, 151)">
     <circle cx="5" cy="5" r="5" fill="#f1e05a"/>
