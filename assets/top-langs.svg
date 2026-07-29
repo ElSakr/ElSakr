@@ -12,11 +12,11 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="175.4" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="200.4" y="55" width="55.9" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="175.5" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="200.5" y="55" width="55.9" height="8" fill="#62A8D6" mask="url(#bm)"/>
   <rect x="256.3" y="55" width="54.7" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="311.0" y="55" width="47.3" height="8" fill="#178600" mask="url(#bm)"/>
-  <rect x="358.3" y="55" width="28.0" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="311.1" y="55" width="47.3" height="8" fill="#178600" mask="url(#bm)"/>
+  <rect x="358.4" y="55" width="28.0" height="8" fill="#3178c6" mask="url(#bm)"/>
   <rect x="386.3" y="55" width="4.7" height="8" fill="#f1e05a" mask="url(#bm)"/>
   <rect x="391.0" y="55" width="2.3" height="8" fill="#663399" mask="url(#bm)"/>
   <rect x="393.3" y="55" width="1.7" height="8" fill="#555555" mask="url(#bm)"/>
