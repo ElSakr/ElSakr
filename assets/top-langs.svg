@@ -12,10 +12,10 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="161.1" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="186.1" y="55" width="67.3" height="8" fill="#178600" mask="url(#bm)"/>
-  <rect x="253.3" y="55" width="50.5" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="303.8" y="55" width="50.3" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="160.9" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="185.9" y="55" width="67.7" height="8" fill="#178600" mask="url(#bm)"/>
+  <rect x="253.5" y="55" width="50.4" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="303.9" y="55" width="50.2" height="8" fill="#e34c26" mask="url(#bm)"/>
   <rect x="354.1" y="55" width="29.4" height="8" fill="#3178c6" mask="url(#bm)"/>
   <rect x="383.5" y="55" width="4.6" height="8" fill="#f1e05a" mask="url(#bm)"/>
   <rect x="388.1" y="55" width="3.5" height="8" fill="#3572A5" mask="url(#bm)"/>
@@ -28,7 +28,7 @@
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#178600"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">18.2%</text>
+    <text x="39" y="9" class="lp">18.3%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#62A8D6"/>
