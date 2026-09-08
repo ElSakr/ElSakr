@@ -12,33 +12,33 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="152.1" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="177.1" y="55" width="70.2" height="8" fill="#7355dd" mask="url(#bm)"/>
-  <rect x="247.3" y="55" width="48.0" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="295.3" y="55" width="47.6" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="342.9" y="55" width="28.4" height="8" fill="#3178c6" mask="url(#bm)"/>
-  <rect x="371.3" y="55" width="9.1" height="8" fill="#A97BFF" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="150.9" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="175.9" y="55" width="72.0" height="8" fill="#7355dd" mask="url(#bm)"/>
+  <rect x="247.9" y="55" width="47.7" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="295.6" y="55" width="47.2" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="342.8" y="55" width="28.6" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="371.4" y="55" width="9.0" height="8" fill="#A97BFF" mask="url(#bm)"/>
   <rect x="380.4" y="55" width="7.8" height="8" fill="#3572A5" mask="url(#bm)"/>
   <rect x="388.2" y="55" width="6.8" height="8" fill="#f1e05a" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#4A76B8"/>
     <text x="16" y="9" class="ln">MQL5</text>
-    <text x="54" y="9" class="lp">41.1%</text>
+    <text x="54" y="9" class="lp">40.8%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#7355dd"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">19.0%</text>
+    <text x="39" y="9" class="lp">19.5%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#e34c26"/>
     <text x="16" y="9" class="ln">HTML</text>
-    <text x="54" y="9" class="lp">13.0%</text>
+    <text x="54" y="9" class="lp">12.9%</text>
   </g>
   <g transform="translate(210, 119)">
     <circle cx="5" cy="5" r="5" fill="#62A8D6"/>
     <text x="16" y="9" class="ln">MQL4</text>
-    <text x="54" y="9" class="lp">12.9%</text>
+    <text x="54" y="9" class="lp">12.8%</text>
   </g>
   <g transform="translate(25, 151)">
     <circle cx="5" cy="5" r="5" fill="#3178c6"/>
