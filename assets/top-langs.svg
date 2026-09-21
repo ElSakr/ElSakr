@@ -12,23 +12,23 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="97.8" height="8" fill="#7355dd" mask="url(#bm)"/>
-  <rect x="122.8" y="55" width="68.3" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="191.1" y="55" width="62.7" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="253.8" y="55" width="51.5" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="305.3" y="55" width="38.1" height="8" fill="#3178c6" mask="url(#bm)"/>
-  <rect x="343.4" y="55" width="23.7" height="8" fill="#A97BFF" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="98.2" height="8" fill="#7355dd" mask="url(#bm)"/>
+  <rect x="123.2" y="55" width="68.2" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="191.4" y="55" width="62.6" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="254.0" y="55" width="51.4" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="305.4" y="55" width="38.0" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="343.5" y="55" width="23.7" height="8" fill="#A97BFF" mask="url(#bm)"/>
   <rect x="367.1" y="55" width="14.0" height="8" fill="#3572A5" mask="url(#bm)"/>
   <rect x="381.1" y="55" width="13.9" height="8" fill="#f1e05a" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#7355dd"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">26.4%</text>
+    <text x="39" y="9" class="lp">26.5%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#4A76B8"/>
     <text x="16" y="9" class="ln">MQL5</text>
-    <text x="54" y="9" class="lp">18.5%</text>
+    <text x="54" y="9" class="lp">18.4%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#e34c26"/>
