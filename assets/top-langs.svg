@@ -12,9 +12,9 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="104.8" height="8" fill="#7355dd" mask="url(#bm)"/>
-  <rect x="129.8" y="55" width="61.8" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="191.6" y="55" width="58.4" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="104.9" height="8" fill="#7355dd" mask="url(#bm)"/>
+  <rect x="129.9" y="55" width="61.8" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="191.6" y="55" width="58.3" height="8" fill="#4A76B8" mask="url(#bm)"/>
   <rect x="250.0" y="55" width="43.3" height="8" fill="#62A8D6" mask="url(#bm)"/>
   <rect x="293.3" y="55" width="40.3" height="8" fill="#3178c6" mask="url(#bm)"/>
   <rect x="333.6" y="55" width="30.3" height="8" fill="#A97BFF" mask="url(#bm)"/>
