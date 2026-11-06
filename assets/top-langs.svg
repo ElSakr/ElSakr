@@ -12,23 +12,23 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="97.4" height="8" fill="#7355dd" mask="url(#bm)"/>
-  <rect x="122.4" y="55" width="53.4" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="175.7" y="55" width="46.4" height="8" fill="#f1e05a" mask="url(#bm)"/>
-  <rect x="222.1" y="55" width="42.7" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="264.8" y="55" width="37.1" height="8" fill="#A97BFF" mask="url(#bm)"/>
-  <rect x="301.9" y="55" width="32.9" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="334.9" y="55" width="30.7" height="8" fill="#3178c6" mask="url(#bm)"/>
-  <rect x="365.5" y="55" width="29.5" height="8" fill="#3572A5" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="98.0" height="8" fill="#7355dd" mask="url(#bm)"/>
+  <rect x="123.0" y="55" width="53.5" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="176.5" y="55" width="46.3" height="8" fill="#f1e05a" mask="url(#bm)"/>
+  <rect x="222.8" y="55" width="42.5" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="265.3" y="55" width="36.9" height="8" fill="#A97BFF" mask="url(#bm)"/>
+  <rect x="302.3" y="55" width="32.8" height="8" fill="#62A8D6" mask="url(#bm)"/>
+  <rect x="335.0" y="55" width="30.5" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="365.6" y="55" width="29.4" height="8" fill="#3572A5" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#7355dd"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">26.3%</text>
+    <text x="39" y="9" class="lp">26.5%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#e34c26"/>
     <text x="16" y="9" class="ln">HTML</text>
-    <text x="54" y="9" class="lp">14.4%</text>
+    <text x="54" y="9" class="lp">14.5%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#f1e05a"/>
