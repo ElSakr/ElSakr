@@ -14,7 +14,7 @@
   <text x="25" y="38" class="ttl">Most Used Languages</text>
   <rect x="25.0" y="55" width="98.0" height="8" fill="#7355dd" mask="url(#bm)"/>
   <rect x="123.0" y="55" width="53.5" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="176.5" y="55" width="46.3" height="8" fill="#f1e05a" mask="url(#bm)"/>
+  <rect x="176.5" y="55" width="46.4" height="8" fill="#f1e05a" mask="url(#bm)"/>
   <rect x="222.8" y="55" width="42.5" height="8" fill="#4A76B8" mask="url(#bm)"/>
   <rect x="265.3" y="55" width="36.9" height="8" fill="#A97BFF" mask="url(#bm)"/>
   <rect x="302.3" y="55" width="32.8" height="8" fill="#62A8D6" mask="url(#bm)"/>
