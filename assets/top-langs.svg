@@ -12,28 +12,28 @@
   </defs>
   <rect class="bg" x="0.5" y="0.5" width="419" height="229" rx="6"/>
   <text x="25" y="38" class="ttl">Most Used Languages</text>
-  <rect x="25.0" y="55" width="88.7" height="8" fill="#7355dd" mask="url(#bm)"/>
-  <rect x="113.7" y="55" width="82.0" height="8" fill="#e34c26" mask="url(#bm)"/>
-  <rect x="195.7" y="55" width="69.0" height="8" fill="#f1e05a" mask="url(#bm)"/>
-  <rect x="264.6" y="55" width="32.0" height="8" fill="#4A76B8" mask="url(#bm)"/>
-  <rect x="296.6" y="55" width="27.2" height="8" fill="#A97BFF" mask="url(#bm)"/>
-  <rect x="323.8" y="55" width="24.4" height="8" fill="#3572A5" mask="url(#bm)"/>
-  <rect x="348.1" y="55" width="24.3" height="8" fill="#62A8D6" mask="url(#bm)"/>
-  <rect x="372.5" y="55" width="22.5" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="25.0" y="55" width="88.1" height="8" fill="#7355dd" mask="url(#bm)"/>
+  <rect x="113.1" y="55" width="81.4" height="8" fill="#e34c26" mask="url(#bm)"/>
+  <rect x="194.4" y="55" width="68.4" height="8" fill="#f1e05a" mask="url(#bm)"/>
+  <rect x="262.8" y="55" width="31.7" height="8" fill="#4A76B8" mask="url(#bm)"/>
+  <rect x="294.5" y="55" width="26.9" height="8" fill="#A97BFF" mask="url(#bm)"/>
+  <rect x="321.5" y="55" width="25.2" height="8" fill="#3178c6" mask="url(#bm)"/>
+  <rect x="346.7" y="55" width="24.2" height="8" fill="#3572A5" mask="url(#bm)"/>
+  <rect x="370.9" y="55" width="24.1" height="8" fill="#62A8D6" mask="url(#bm)"/>
   <g transform="translate(25, 87)">
     <circle cx="5" cy="5" r="5" fill="#7355dd"/>
     <text x="16" y="9" class="ln">C#</text>
-    <text x="39" y="9" class="lp">24.0%</text>
+    <text x="39" y="9" class="lp">23.8%</text>
   </g>
   <g transform="translate(210, 87)">
     <circle cx="5" cy="5" r="5" fill="#e34c26"/>
     <text x="16" y="9" class="ln">HTML</text>
-    <text x="54" y="9" class="lp">22.2%</text>
+    <text x="54" y="9" class="lp">22.0%</text>
   </g>
   <g transform="translate(25, 119)">
     <circle cx="5" cy="5" r="5" fill="#f1e05a"/>
     <text x="16" y="9" class="ln">JavaScript</text>
-    <text x="99" y="9" class="lp">18.6%</text>
+    <text x="99" y="9" class="lp">18.5%</text>
   </g>
   <g transform="translate(210, 119)">
     <circle cx="5" cy="5" r="5" fill="#4A76B8"/>
@@ -46,18 +46,18 @@
     <text x="69" y="9" class="lp">7.3%</text>
   </g>
   <g transform="translate(210, 151)">
-    <circle cx="5" cy="5" r="5" fill="#3572A5"/>
-    <text x="16" y="9" class="ln">Python</text>
-    <text x="69" y="9" class="lp">6.6%</text>
-  </g>
-  <g transform="translate(25, 183)">
-    <circle cx="5" cy="5" r="5" fill="#62A8D6"/>
-    <text x="16" y="9" class="ln">MQL4</text>
-    <text x="54" y="9" class="lp">6.6%</text>
-  </g>
-  <g transform="translate(210, 183)">
     <circle cx="5" cy="5" r="5" fill="#3178c6"/>
     <text x="16" y="9" class="ln">TypeScript</text>
-    <text x="99" y="9" class="lp">6.1%</text>
+    <text x="99" y="9" class="lp">6.8%</text>
+  </g>
+  <g transform="translate(25, 183)">
+    <circle cx="5" cy="5" r="5" fill="#3572A5"/>
+    <text x="16" y="9" class="ln">Python</text>
+    <text x="69" y="9" class="lp">6.5%</text>
+  </g>
+  <g transform="translate(210, 183)">
+    <circle cx="5" cy="5" r="5" fill="#62A8D6"/>
+    <text x="16" y="9" class="ln">MQL4</text>
+    <text x="54" y="9" class="lp">6.5%</text>
   </g>
 </svg>
